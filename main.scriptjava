@@ -1,0 +1,43 @@
+#include <iostream> // C++ style
+using namespace std;
+
+class Main { // Java and C++ class style
+public:
+    // Function to add two integers (C++ and Java)
+    static int add(int x, int y) {
+        return x + y;
+    }
+
+    // Function that takes two optional parameters (Python and JavaScript style)
+    static void mayOption(optional<int> sth1, optional<int> sth2) {
+        // Handling optional values (C++17 feature similar to Python's Optional)
+        if (sth1.has_value() && sth2.has_value()) {
+            cout << "Both values are present." << endl;
+        } else {
+            cout << "One or both values are missing." << endl;
+        }
+    }
+
+    // Main function (C++, Java, and Python style)
+    static int main() {
+        cout << "Hello world" << endl; // C++ and Java style
+        int result = add(3, 5); // Mixing C++ and Java
+        cout << "The result is: " << result << endl;
+
+        // JavaScript style for handling exceptions
+        try {
+            // Code that may throw an exception
+        } catch (exception& e) {
+            // Exception handling (C++ style with JavaScript-like syntax)
+            cout << "Exception caught: " << e.what() << endl;
+        }
+        
+        return 0; // C++ and Java style
+    }
+};
+
+// Python style to execute the main function
+int main() {
+    Main::main(); // Calling the main function
+    return 0;
+}
